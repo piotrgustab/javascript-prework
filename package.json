@@ -23,7 +23,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mkdirp": "^1.0.4"
+    "mkdirp": "^1.0.4",
+    "npm": "^7.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",
