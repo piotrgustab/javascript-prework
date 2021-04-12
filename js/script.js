@@ -1,16 +1,32 @@
-let computerMove = `kamień`;
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+console.log('Wylosowana liczba to: ' + randomNumber);
 
-let playerMove = 'papier';
+let computerMove = 'nieznany ruch';
 
-printMessage('Zagrałem' + playerMove + '! Jeśli Twój ruch to kamień, to wygrywasz!')
+if(randomNumber == 1){
+    computerMove = 'kamień';
+} else if(randomNumber == 2){
+    computerMove = 'papier';
+} else(randomNumber == 3){
+    computerMove = 'nozyce';
+}
+
+printMessage('Mój ruch to: ' + computerMove);
 
 
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-//W ostatnim przykładzie zapisaliśmy słowo 'kamień' w zmiennej computerMove. Następnie, wykorzystaliśmy tę zmienną w tekście wyświetlanym na stronie.
+console.log('Gracz wpisał: ' + playerInput);
 
-//Twoim zadaniem jest wykonanie takiej samej zmiany dla słowa 'papier', które zapiszesz w innej zmiennej – playerMove.
+let playerMove = 'nieznany ruch';
 
-//Po wykonaniu zadania umieść kod JS w pliku js/script.js, zapisz commit i wykonaj push. Następnie na stronie GitHuba znajdź w swoim projekcie najnowszy commit i wyślij mentorowi link do tego commita.
+if(playerInput == '1'){
+  playerMove = 'kamień';
+} else if(playerInput == '2'){
+    playerMove = 'papier';
+} else(playerInput == '3'){
+    playerMove = 'nozyce';
+}
 
+printMessage('Twój ruch to: ' + playerMove);
