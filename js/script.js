@@ -1,10 +1,14 @@
-let randomNumber = Math.floor(Math.random() * 3 + 1);
+
+function playGame(){
+    let randomNumber = Math.floor(Math.random() * 3 + 1);
+
+    function playGame (PlayerMove)
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = getMoveName(randomNumber);
 
-printMessage('Mój ruch to: ' + argComputerMove);
+printMessage('Mój ruch to: ' + ComputerMove);
 
 
 let playerMove = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
@@ -36,4 +40,12 @@ if( ComputerMove == 'kamień' && PlayerMove == 'papier'){
 } else if(ComputerMove == PlayerMove){
     printMessage('Remis');
 }
+}
 
+
+play-rock.addEventListener('click', 1);
+playGame('Kamień')
+play-paper.addEventListener('click', 2);
+playGame('Papier')
+play-scissors.addEventListener('click', 3);
+playGame('Nozyczki')
